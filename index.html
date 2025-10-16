@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da6f2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <title>Tecnología Orientada a Objetos (POO)</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+
+        <div class="bg-primary/10 dark:bg-primary/20 text-center py-4 border-b border-primary/50">
+            <div class="max-w-[960px] mx-auto px-4">
+                <p class="text-sm md:text-base font-semibold text-gray-900 dark:text-gray-100 whitespace-pre-line">
+                    República Bolivariana de Venezuela
+                    Ministerio del Poder Popular para la Educación
+                    Instituto Universitario Técnico Elías Calixto Pompa
+                    El Tigre Estado Anzoátegui
+                </p>
+            </div>
+        </div>
+        <main class="flex h-full grow flex-col">
+            <div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-10 md:py-16">
+                <div class="flex flex-col max-w-[960px] flex-1">
+                    <header class="text-center mb-12">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+                            El Paradigma de la Tecnología Orientada a Objetos (TOO)
+                        </h1>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                            La POO es un enfoque revolucionario que organiza el desarrollo de software en torno a entidades (objetos) que agrupan datos y comportamientos, ofreciendo soluciones más robustas y escalables.
+                        </p>
+                    </header>
+
+                    <section class="mb-16">
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                            <span class="material-symbols-outlined text-primary align-middle mr-2 text-4xl">widgets</span>Clases y Objetos: Modelando la Realidad
+                        </h2>
+                        
+                        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-4 flex flex-col md:flex-row gap-6 items-center">
+                            <div class="md:w-3/4">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Clase (El Molde)</h3>
+                                <p class="text-base text-gray-600 dark:text-gray-400">
+                                    Es una definición abstracta de una entidad. Actúa como un <strong>plano o plantilla</strong> donde se especifican los campos (atributos) y los métodos (funciones) que tendrán sus instancias. La clase define el <em>tipo</em> de objeto.
+                                </p>
+                                <p class="text-sm font-light text-primary mt-2">
+                                    Ejemplo: La clase <code>CuentaBancaria</code> define que cualquier cuenta tendrá un <code>saldo</code> y los métodos <code>depositar()</code> y <code>retirar()</code>.
+                                </p>
+                            </div>
+                            <div class="md:w-1/4 flex-shrink-0">
+                                <img src="imagen1.png" alt="Diagrama de Clase" class="w-full h-auto rounded-lg shadow-md border border-gray-300 dark:border-gray-600"/>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg flex flex-col md:flex-row-reverse gap-6 items-center">
+                            <div class="md:w-3/4">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Objeto (La Instancia)</h3>
+                                <p class="text-base text-gray-600 dark:text-gray-400">
+                                    Es la <strong>instanciación concreta</strong> de una clase. Cada objeto mantiene su propio estado, es decir, sus propios valores para los atributos definidos en la clase. Los objetos se comunican entre sí mediante el envío de mensajes.
+                                </p>
+                                <p class="text-sm font-light text-primary mt-2">
+                                    Ejemplo: El objeto <code>miCuenta</code> es una instancia de <code>CuentaBancaria</code> con <code>saldo = 1500</code>, mientras que el objeto <code>cuentaAhorro</code> tiene <code>saldo = 500</code>.
+                                </p>
+                            </div>
+                            <div class="md:w-1/4 flex-shrink-0">
+                                <img src="imagen2.png" alt="Representación de un Objeto" class="w-full h-auto rounded-lg shadow-md border border-gray-300 dark:border-gray-600"/>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-16">
+                        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-10">
+                            Profundizando en los Pilares de la POO
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="p-6 rounded-lg bg-primary/5 dark:bg-primary/10 border border-primary/20 flex flex-col md:flex-row gap-6 items-center">
+                                <div class="md:w-1/5 flex-shrink-0">
+                                    <img src="imagen3.png" alt="Icono de Abstracción" class="w-full h-auto rounded-lg shadow-md"/>
+                                </div>
+                                <div class="md:w-4/5">
+                                    <h3 class="text-2xl font-bold text-primary mb-2 flex items-center">
+                                        <span class="material-symbols-outlined text-3xl mr-3">psychology</span> Abstracción
+                                    </h3>
+                                    <p class="text-base text-gray-600 dark:text-gray-400">
+                                        Implica concentrarse en las características esenciales de un objeto y omitir los detalles irrelevantes. Permite al desarrollador crear modelos sencillos de entidades complejas, proporcionando una interfaz limpia y clara para el usuario del objeto.
+                                    </p>
+                                    <p class="text-sm font-light italic text-gray-500 dark:text-gray-400 mt-2">
+                                        Importancia: Reduce la sobrecarga cognitiva y aísla al programador de las complejidades internas (como el código de bajo nivel).
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="p-6 rounded-lg bg-primary/5 dark:bg-primary/10 border border-primary/20 flex flex-col md:flex-row-reverse gap-6 items-center">
+                                <div class="md:w-1/5 flex-shrink-0">
+                                    <img src="imagen4.png" alt="Icono de Encapsulamiento" class="w-full h-auto rounded-lg shadow-md"/>
+                                </div>
+                                <div class="md:w-4/5">
+                                    <h3 class="text-2xl font-bold text-primary mb-2 flex items-center">
+                                        <span class="material-symbols-outlined text-3xl mr-3">lock</span> Encapsulamiento
+                                    </h3>
+                                    <p class="text-base text-gray-600 dark:text-gray-400">
+                                        Asegura que los datos internos de un objeto solo puedan ser accedidos o modificados a través de sus propios métodos públicos (getters y setters). Esto protege los datos de ser corrompidos por código externo y mantiene la integridad del objeto. Es el principio de la ocultación de información.
+                                    </p>
+                                    <p class="text-sm font-light italic text-gray-500 dark:text-gray-400 mt-2">
+                                        Mecanismo: Se implementa con modificadores de acceso (<code>private</code>, <code>protected</code>, <code>public</code>).
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="p-6 rounded-lg bg-primary/5 dark:bg-primary/10 border border-primary/20 flex flex-col md:flex-row gap-6 items-center">
+                                <div class="md:w-1/5 flex-shrink-0">
+                                    <img src="imagen5.png" alt="Icono de Herencia" class="w-full h-auto rounded-lg shadow-md"/>
+                                </div>
+                                <div class="md:w-4/5">
+                                    <h3 class="text-2xl font-bold text-primary mb-2 flex items-center">
+                                        <span class="material-symbols-outlined text-3xl mr-3">account_tree</span> Herencia
+                                    </h3>
+                                    <p class="text-base text-gray-600 dark:text-gray-400">
+                                        Define una relación jerárquica "es-un" (por ejemplo, un Perro es-un Animal). La clase hija hereda la estructura (atributos) y el comportamiento (métodos) de la clase padre. Permite la especialización del código.
+                                    </p>
+                                    <p class="text-sm font-light italic text-gray-500 dark:text-gray-400 mt-2">
+                                        Tipos: La mayoría de los lenguajes (como Java) soportan herencia simple, mientras que otros (como C++) permiten la herencia múltiple.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="p-6 rounded-lg bg-primary/5 dark:bg-primary/10 border border-primary/20 flex flex-col md:flex-row-reverse gap-6 items-center">
+                                <div class="md:w-1/5 flex-shrink-0">
+                                    <img src="imagen6.png" alt="Icono de Polimorfismo" class="w-full h-auto rounded-lg shadow-md"/>
+                                </div>
+                                <div class="md:w-4/5">
+                                    <h3 class="text-2xl font-bold text-primary mb-2 flex items-center">
+                                        <span class="material-symbols-outlined text-3xl mr-3">theater_comedy</span> Polimorfismo
+                                    </h3>
+                                    <p class="text-base text-gray-600 dark:text-gray-400">
+                                        Se manifiesta principalmente de dos maneras: Sobrecarga (Overloading), que permite varios métodos con el mismo nombre pero diferentes parámetros; y Sobreescritura (Overriding), donde la clase hija redefine un método heredado de la clase padre para darle una implementación específica.
+                                    </p>
+                                    <p class="text-sm font-light italic text-gray-500 dark:text-gray-400 mt-2">
+                                        Beneficio: Permite tratar objetos de diferentes clases de manera uniforme (por ejemplo, tener una lista de Animales y llamar a <code>hacerSonido()</code> sin saber si es un Perro o un Gato).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="mb-16">
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+                            Beneficios Estratégicos y Aplicación de la POO
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 border-t-4 border-l-2 border-primary/70">
+                                <img src="imagen7.png" alt="Icono de Fiabilidad" class="w-12 h-12 mb-3 mx-auto"/>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1 text-center">Fiabilidad</h3>
+                                <p class="text-base text-gray-600 dark:text-gray-400">
+                                    La encapsulación minimiza los efectos secundarios no deseados. Al ser sistemas modulares, la detección y corrección de errores es más rápida y precisa.
+                                </p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 border-t-4 border-l-2 border-primary/70">
+                                <img src="imagen8.png" alt="Icono de Reutilización" class="w-12 h-12 mb-3 mx-auto"/>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1 text-center">Reutilización</h3>
+                                <p class="text-base text-gray-600 dark:text-gray-400">
+                                    La herencia permite construir nuevos sistemas a partir de componentes existentes. Esto se traduce en menor tiempo de desarrollo y mayor productividad.
+                                </p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 border-t-4 border-l-2 border-primary/70">
+                                <img src="imagen9.png" alt="Icono de Escalabilidad" class="w-12 h-12 mb-3 mx-auto"/>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1 text-center">Escalabilidad</h3>
+                                <p class="text-base text-gray-600 dark:text-gray-400">
+                                    Al ser sistemas basados en el crecimiento y la adición de nuevos objetos (clases) sin modificar el código existente, son inherentemente más fáciles de escalar para manejar la complejidad creciente.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                            <span class="material-symbols-outlined text-primary align-middle mr-2 text-4xl">code_blocks</span>Conclusión y Lenguajes Clave
+                        </h2>
+                        <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 border-l-4 border-primary pl-4">
+                            La Programación Orientada a Objetos no es solo una técnica de codificación, sino una metodología de diseño de software que facilita la gestión de sistemas complejos. Su adopción fue clave para el desarrollo de grandes aplicaciones empresariales y sistemas operativos modernos.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            <div class="p-3 bg-primary/10 dark:bg-primary/20 rounded-lg text-center">
+                                <img src="imagen10.png" alt="Logo de Java" class="w-12 h-12 mb-2 mx-auto"/>
+                                <div class="font-bold text-primary">Java</div>
+                            </div>
+                            <div class="p-3 bg-primary/10 dark:bg-primary/20 rounded-lg text-center">
+                                <img src="imagen11.png" alt="Logo de C++" class="w-12 h-12 mb-2 mx-auto"/>
+                                <div class="font-bold text-primary">C++</div>
+                            </div>
+                            <div class="p-3 bg-primary/10 dark:bg-primary/20 rounded-lg text-center">
+                                <img src="imagen12.png" alt="Logo de Python" class="w-12 h-12 mb-2 mx-auto"/>
+                                <div class="font-bold text-primary">Python</div>
+                            </div>
+                            <div class="p-3 bg-primary/10 dark:bg-primary/20 rounded-lg text-center">
+                                <img src="imagen13.png" alt="Logo de C#" class="w-12 h-12 mb-2 mx-auto"/>
+                                <div class="font-bold text-primary">C# (.NET)</div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-primary/10 dark:bg-primary/20 text-center py-6 mt-10 border-t border-primary/50">
+            <div class="max-w-[960px] mx-auto px-4">
+                <p class="text-sm md:text-base text-gray-700 dark:text-gray-300 font-medium">
+                    Juliano Cardona 32.281.199 Administración mención Informática
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
